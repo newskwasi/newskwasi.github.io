@@ -8,7 +8,7 @@ links:
   - target: https://twitter.com/journokwasi
     text: '@journokwasi'
 pages:
-  -type: raw
+  - type: raw
   title: Newsapp
   slug: newsapp
   - type: gdoc
