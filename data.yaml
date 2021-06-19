@@ -9,10 +9,10 @@ links:
     text: '@journokwasi'
 pages:
   - type: raw
-  title: Newsapp
-  slug: newsapp
+    title: Newsapp
+    slug: newsapp
   - type: gdoc
-    title: Not even a pandemic can stop Ghana’s rising death toll from road crashes
+    title: Not even a pandemic can stop Ghana's rising death toll from road crashes
     slug: first-project
     url: https://docs.google.com/document/d/1UIwSslvKuzPwIH_Kty50hnvCQ3XJWFqL7uUrlyOJYkA/edit#
   - type: html
@@ -20,3 +20,5 @@ pages:
     #template: html_bootstrap
     slug: third-project
     filepath: Asiedu.html
+
+    
