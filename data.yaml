@@ -10,7 +10,7 @@ links:
 pages:
   - type: raw
     title: Citibike Responsive Maps
-    slug: citibike
+    slug: responsivenyc
   - type: raw
     title: Citibike New York map
     slug: ai2html
