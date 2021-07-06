@@ -9,6 +9,9 @@ links:
     text: '@journokwasi'
 pages:
   - type: raw
+    title: Citibike Responsive Maps
+    slug: citibike
+  - type: raw
     title: Citibike New York map
     slug: ai2html
   - type: raw

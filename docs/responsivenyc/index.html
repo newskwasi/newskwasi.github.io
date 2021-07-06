@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+        
+        #g-text-laptop, #g-text-medium, #g-text-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-text-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-text-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-text-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>This is your title</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">Optional kicker</p>
+      <h1 class="headline">Here is your headline</h1>
+      <h2 class="subhead">This is the subhead</h2>
+      <p class="byline">By YOUR NAME</p>
+      <p class="date">Published September 9, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+<!-- Generated by ai2html v0.102.0 - 2021-07-05 21:25 -->
+<!-- ai file: text.ai -->
+<style media="screen,print">
+	#g-text-box ,
+	#g-text-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-text-box p {
+		margin:0;
+	}
+	#g-text-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-text-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-text-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-text-box .g-aiPointText p { white-space: nowrap; }
+	#g-text-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-text-medium p {
+		font-weight:500;
+		line-height:19px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-text-medium .g-pstyle0 {
+		font-family:Helvetica;
+		font-weight:400;
+		line-height:12px;
+		height:12px;
+		font-size:10px;
+	}
+	#g-text-medium .g-pstyle1 {
+		font-family:Helvetica;
+		font-weight:400;
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+	}
+	#g-text-medium .g-pstyle2 {
+		font-family:Helvetica;
+		font-weight:400;
+		line-height:9px;
+		height:9px;
+		font-size:8px;
+	}
+	#g-text-medium .g-pstyle3 {
+		height:19px;
+	}
+	#g-text-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-text-laptop p {
+		font-weight:500;
+		line-height:17px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-text-laptop .g-pstyle0 {
+		font-family:Helvetica;
+		font-weight:400;
+		line-height:10px;
+		height:10px;
+		font-size:8px;
+	}
+	#g-text-laptop .g-pstyle1 {
+		font-family:Helvetica;
+		font-weight:400;
+		line-height:6px;
+		height:6px;
+		font-size:5px;
+	}
+	#g-text-laptop .g-pstyle2 {
+		height:17px;
+	}
+	#g-text-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-text-mobile p {
+		font-family:Helvetica;
+		font-weight:400;
+		line-height:14px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:12px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-text-mobile .g-pstyle0 {
+		height:14px;
+		color:rgb(237,30,121);
+	}
+	#g-text-mobile .g-pstyle1 {
+		height:14px;
+	}
+	#g-text-mobile .g-pstyle2 {
+		font-weight:500;
+		height:14px;
+		color:rgb(212,20,90);
+	}
+
+</style>
+
+<div id="g-text-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-text-medium" class="g-artboard" style="min-width: 620px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style="padding: 0 0 68.5484% 0;"></div>
+		<img id="g-text-medium-img" class="g-aiImg" alt="" src="text-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:5.3185%;margin-top:-7.6px;left:30.9286%;width:203px;">
+			<p class="g-pstyle0">Citibike Trips per Station for April 2021</p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:8.1383%;margin-top:-6.6px;left:78.3068%;width:59px;">
+			<p class="g-pstyle1">tripCount</p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:10.7236%;margin-top:-5.6px;left:80.5068%;width:45px;">
+			<p class="g-pstyle2">10,000</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.9872%;margin-top:-10.2px;left:53.5426%;width:100px;">
+			<p class="g-pstyle3">THE BRONX</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:17.7824%;margin-top:-5.6px;left:80.5068%;width:41px;">
+			<p class="g-pstyle2">8,000</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.6059%;margin-top:-5.6px;left:80.5068%;width:41px;">
+			<p class="g-pstyle2">6,000</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:31.6648%;margin-top:-5.6px;left:80.5068%;width:41px;">
+			<p class="g-pstyle2">4,000</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.9284%;margin-top:-10.2px;left:28.8183%;width:110px;">
+			<p class="g-pstyle3">MANHATTAN</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:38.7236%;margin-top:-5.6px;left:80.5068%;width:41px;">
+			<p class="g-pstyle2">2,000</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:44.0462%;margin-top:-10.2px;left:50.3524%;width:78px;">
+			<p class="g-pstyle3">QUEENS</p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:60.9874%;margin-top:-10.2px;left:19.62%;width:125px;">
+			<p class="g-pstyle3">STATEN ISLAND</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:63.5756%;margin-top:-10.2px;left:46.4163%;width:95px;">
+			<p class="g-pstyle3">BROOKLYN</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:91.5755%;margin-top:-10.2px;left:50.7849%;width:156px;">
+			<p class="g-pstyle3">Source: Citibike NYC</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-text-laptop" class="g-artboard" style="min-width: 490px;max-width: 619px;max-height: 442px" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style="padding: 0 0 71.4286% 0;"></div>
+		<img id="g-text-laptop-img" class="g-aiImg" alt="" src="text-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:5.0368%;margin-top:-6.6px;left:32.1452%;width:177px;">
+			<p class="g-pstyle0">Citibike Trips per Station for April 2021</p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:14.5525%;margin-top:-3.9px;left:21.2333%;width:45px;">
+			<p class="g-pstyle1">tripCount</p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:16.6025%;margin-top:-9.1px;left:58.2308%;width:81px;">
+			<p class="g-pstyle2">The Bronx</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:18.7482%;margin-top:-3.6px;left:22.1273%;width:36px;">
+			<p class="g-pstyle1">10,000</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:23.0339%;margin-top:-3.6px;left:22.1273%;width:34px;">
+			<p class="g-pstyle1">8,000</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:28.1768%;margin-top:-3.6px;left:22.1273%;width:34px;">
+			<p class="g-pstyle1">6,000</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.4597%;margin-top:-9.1px;left:36.7614%;width:86px;">
+			<p class="g-pstyle2">Manhattan</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:33.3196%;margin-top:-3.6px;left:22.1273%;width:34px;">
+			<p class="g-pstyle1">4,000</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:38.4625%;margin-top:-3.6px;left:22.1273%;width:34px;">
+			<p class="g-pstyle1">2,000</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:46.0311%;margin-top:-9.1px;left:54.1249%;width:67px;">
+			<p class="g-pstyle2">Queens</p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:62.8883%;margin-top:-9.1px;left:22.7003%;width:97px;">
+			<p class="g-pstyle2">Staten Island</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:68.0311%;margin-top:-9.1px;left:46.8292%;width:74px;">
+			<p class="g-pstyle2">Brooklyn</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:92.8883%;margin-top:-9.1px;left:51.4451%;width:139px;">
+			<p class="g-pstyle2">Source: Citibike NYC</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-text-mobile" class="g-artboard" style="max-width: 489px;max-height: 645px" data-aspect-ratio="0.758" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 131.9467% 0;"></div>
+		<img id="g-text-mobile-img" class="g-aiImg" alt="" src="text-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:13.9526%;margin-top:-9px;left:13.8734%;width:298px;">
+			<p class="g-pstyle0">NYC borough with the most Citibike Trips (Ranked)*</p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:35.9413%;margin-top:-37.8px;left:11.1206%;width:92px;">
+			<p class="g-pstyle1">1. Manhattan</p>
+			<p class="g-pstyle1">2. Brookyln</p>
+			<p class="g-pstyle1">3. Queens</p>
+			<p class="g-pstyle1">4. The Bronx</p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:78.3189%;margin-top:-7.5px;left:55.9203%;width:122px;">
+			<p class="g-pstyle2">Source: Citibike NYC</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:88.7303%;margin-top:-9px;left:14.8471%;width:315px;">
+			<p class="g-pstyle1">*As at April 2021, Staten Island had no Citibike stations</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2021-07-05 21:25 -->
+
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+      
+  </body>
+</html>
